@@ -4,7 +4,7 @@
 ![SQL](https://img.shields.io/badge/SQL-SQLite-003B57?logo=sqlite&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
-![CI](https://github.com/brunofrancco/data-analytics/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/brunofrancco/insurance-data-analytics/actions/workflows/ci.yml/badge.svg)
 
 Projeto de ponta a ponta que simula o dia a dia de um analista de dados em uma **seguradora digital** que vende
 seguros (Vida, Residencial, Auto, Celular, Viagem e Pet) pelo app de um banco: extração com **SQL**, validação de
@@ -96,8 +96,8 @@ Detalhes, diagrama ER e decisões de modelagem em [`docs/modelo_de_dados.md`](do
 ## Como executar
 
 ```bash
-git clone https://github.com/brunofrancco/data-analytics.git
-cd data-analytics
+git clone https://github.com/brunofrancco/insurance-data-analytics.git
+cd insurance-data-analytics
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 
