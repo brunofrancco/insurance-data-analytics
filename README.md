@@ -1,4 +1,4 @@
-# Insurance Analytics — análise de dados e modelagem de uma carteira de seguros digital
+# Análise de dados e modelagem de uma carteira de seguros digital
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-SQLite-003B57?logo=sqlite&logoColor=white)
