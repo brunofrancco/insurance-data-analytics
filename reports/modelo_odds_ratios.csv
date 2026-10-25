@@ -1,0 +1,17 @@
+variavel,odds_ratio,ic95_inf,ic95_sup,p_valor
+produto=Viagem,4.9489,4.1141,5.9532,0.0
+produto=Celular,2.7553,2.3615,3.2148,0.0
+produto=Pet,2.0741,1.7441,2.4665,0.0
+meio_pagamento=pix,1.9612,1.7074,2.2527,0.0
+canal=parceiro,1.74,1.5056,2.0109,0.0
+produto=Auto,1.7287,1.4468,2.0656,0.0
+premio_relativo,1.5993,1.2377,2.0666,0.0003
+faixa_renda=2k_5k,1.3667,1.0923,1.7101,0.0063
+faixa_renda=5k_10k,1.2779,1.0376,1.5738,0.0211
+faixa_renda=ate_2k,1.246,0.9678,1.6041,0.088
+meio_pagamento=cartao_credito,1.2361,1.1108,1.3756,0.0001
+produto=Residencial,1.1532,0.963,1.3811,0.1212
+canal=internet_banking,1.0569,0.9377,1.1914,0.3647
+meses_de_conta,1.0009,0.9986,1.0032,0.4487
+idade,0.9857,0.9816,0.9899,0.0
+produtos_na_contratacao,0.8303,0.7393,0.9325,0.0017

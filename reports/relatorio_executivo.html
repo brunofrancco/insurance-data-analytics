@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relatório Executivo de Seguros</title>
+<style>
+:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--line:#e4e3df;--accent:#2a78d6;--card:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#1a1a19;--ink:#f0efec;--muted:#c3c2b7;--line:#3a3936;--card:#232321}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:32px 16px}
+h1{margin:0 0 4px;font-size:26px} h2{margin:40px 0 12px;font-size:19px}
+.sub{color:var(--muted);margin:0 0 24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}.card .l{color:var(--muted);font-size:13px}
+img{max-width:100%;border:1px solid var(--line);border-radius:10px;background:#fcfcfb}
+ul.ins li{margin-bottom:6px}
+.tbl{overflow-x:auto} table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left} th{color:var(--muted);font-weight:600}
+footer{margin-top:48px;color:var(--muted);font-size:12px}
+</style></head><body><main>
+<h1>Relatório Executivo — Carteira de Seguros</h1>
+<p class="sub">Ano de referência 2025 · gerado automaticamente em 25/10/2026 16:48 · dados sintéticos</p>
+<div class="cards">
+<div class="card"><div class="v">21.706</div><div class="l">Apólices ativas</div></div><div class="card"><div class="v">16.025</div><div class="l">Clientes ativos</div></div><div class="card"><div class="v">R$ 11.806.038</div><div class="l">Prêmio ganho no ano</div></div><div class="card"><div class="v">58,0%</div><div class="l">Sinistralidade</div></div><div class="card"><div class="v">R$ 60,73</div><div class="l">Ticket médio mensal</div></div><div class="card"><div class="v">1,35</div><div class="l">Produtos por cliente</div></div>
+</div>
+<h2>Principais achados</h2>
+<ul class="ins"><li>Pet tem a maior sinistralidade (72%), contra 24% em Viagem: revisar precificação/aceitação de Pet.</li><li>Pagamento via Pix cancela 30% em 12 meses, contra 19% no débito em conta: incentivar débito automático na contratação.</li><li>O maior gargalo do funil é oferta → simulação (55% de passagem).</li><li>71% dos clientes ativos têm um único produto: base relevante para cross-sell.</li><li>Em média, 77% das apólices seguem ativas 12 meses após a contratação.</li></ul>
+<h2>Evolução da carteira</h2><img src="figures/premio_mensal.png" alt="Prêmio ganho mensal por produto">
+<h2>Sinistralidade</h2><img src="figures/sinistralidade_produto.png" alt="Sinistralidade por produto">
+<div class="tbl"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>produto</th>
+      <th>categoria</th>
+      <th>premio_ganho</th>
+      <th>sinistro_incorrido</th>
+      <th>sinistralidade</th>
+      <th>avisos</th>
+      <th>frequencia_anual</th>
+      <th>severidade_media</th>
+      <th>taxa_negativa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pet</td>
+      <td>Pessoas</td>
+      <td>R$ 1.451.936</td>
+      <td>R$ 1.051.311</td>
+      <td>72,4%</td>
+      <td>1417</td>
+      <td>0.6019</td>
+      <td>R$ 849</td>
+      <td>12,6%</td>
+    </tr>
+    <tr>
+      <td>Auto</td>
+      <td>Auto</td>
+      <td>R$ 5.450.132</td>
+      <td>R$ 3.782.417</td>
+      <td>69,4%</td>
+      <td>258</td>
+      <td>0.1297</td>
+      <td>R$ 16.590</td>
+      <td>11,6%</td>
+    </tr>
+    <tr>
+      <td>Celular</td>
+      <td>Patrimonial</td>
+      <td>R$ 1.373.623</td>
+      <td>R$ 797.311</td>
+      <td>58,0%</td>
+      <td>528</td>
+      <td>0.1433</td>
+      <td>R$ 1.689</td>
+      <td>10,6%</td>
+    </tr>
+    <tr>
+      <td>Vida</td>
+      <td>Pessoas</td>
+      <td>R$ 2.263.996</td>
+      <td>R$ 868.016</td>
+      <td>38,3%</td>
+      <td>46</td>
+      <td>0.0117</td>
+      <td>R$ 21.700</td>
+      <td>13,0%</td>
+    </tr>
+    <tr>
+      <td>Residencial</td>
+      <td>Patrimonial</td>
+      <td>R$ 999.867</td>
+      <td>R$ 288.656</td>
+      <td>28,9%</td>
+      <td>132</td>
+      <td>0.0409</td>
+      <td>R$ 2.488</td>
+      <td>12,1%</td>
+    </tr>
+    <tr>
+      <td>Viagem</td>
+      <td>Pessoas</td>
+      <td>R$ 266.482</td>
+      <td>R$ 64.546</td>
+      <td>24,2%</td>
+      <td>51</td>
+      <td>0.0474</td>
+      <td>R$ 1.373</td>
+      <td>7,8%</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Jornada digital</h2><img src="figures/funil_conversao.png" alt="Funil da jornada digital">
+<div class="tbl"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>produto</th>
+      <th>ofertas_visualizadas</th>
+      <th>simulacoes</th>
+      <th>propostas</th>
+      <th>contratacoes</th>
+      <th>conv_oferta_simulacao</th>
+      <th>conv_simulacao_proposta</th>
+      <th>conv_proposta_contratacao</th>
+      <th>conversao_total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Viagem</td>
+      <td>4423</td>
+      <td>2756</td>
+      <td>1810</td>
+      <td>1022</td>
+      <td>62,3%</td>
+      <td>65,7%</td>
+      <td>56,5%</td>
+      <td>23,1%</td>
+    </tr>
+    <tr>
+      <td>Auto</td>
+      <td>6563</td>
+      <td>3426</td>
+      <td>2190</td>
+      <td>1508</td>
+      <td>52,2%</td>
+      <td>63,9%</td>
+      <td>68,9%</td>
+      <td>23,0%</td>
+    </tr>
+    <tr>
+      <td>Pet</td>
+      <td>7719</td>
+      <td>3922</td>
+      <td>2445</td>
+      <td>1685</td>
+      <td>50,8%</td>
+      <td>62,3%</td>
+      <td>68,9%</td>
+      <td>21,8%</td>
+    </tr>
+    <tr>
+      <td>Residencial</td>
+      <td>10095</td>
+      <td>5228</td>
+      <td>3240</td>
+      <td>2197</td>
+      <td>51,8%</td>
+      <td>62,0%</td>
+      <td>67,8%</td>
+      <td>21,8%</td>
+    </tr>
+    <tr>
+      <td>Vida</td>
+      <td>12118</td>
+      <td>6124</td>
+      <td>3860</td>
+      <td>2603</td>
+      <td>50,5%</td>
+      <td>63,0%</td>
+      <td>67,4%</td>
+      <td>21,5%</td>
+    </tr>
+    <tr>
+      <td>Celular</td>
+      <td>14112</td>
+      <td>8573</td>
+      <td>5510</td>
+      <td>3024</td>
+      <td>60,8%</td>
+      <td>64,3%</td>
+      <td>54,9%</td>
+      <td>21,4%</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Retenção e cancelamento</h2><img src="figures/retencao_coorte.png" alt="Retenção por coorte">
+<img src="figures/cancelamento_pagamento.png" alt="Cancelamento por meio de pagamento">
+<h2>Modelo de risco de cancelamento</h2>
+<p>Regressão logística com AUC de 0.664 na base de teste. Os 10% de apólices com maior score concentram 19% dos cancelamentos (lift de 1.9x), permitindo ação de retenção focada.</p><img src="figures/modelo_lift_decil.png" alt="Lift por decil">
+<h2>Qualidade de dados</h2>
+<p>11 de 15 regras encontraram problemas na base bruta (772 linhas). Linhas com falha bloqueante foram para quarentena; as demais foram corrigidas no ETL.</p><div class="tbl"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>regra</th>
+      <th>dimensao</th>
+      <th>severidade</th>
+      <th>linhas_com_falha</th>
+      <th>pct_falha</th>
+      <th>status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>clientes_id_duplicado</td>
+      <td>unicidade</td>
+      <td>alerta</td>
+      <td>100</td>
+      <td>0,5%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>clientes_uf_nula</td>
+      <td>completude</td>
+      <td>alerta</td>
+      <td>199</td>
+      <td>1,0%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>clientes_uf_invalida</td>
+      <td>validade</td>
+      <td>alerta</td>
+      <td>200</td>
+      <td>1,0%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>clientes_nascimento_futuro</td>
+      <td>validade</td>
+      <td>alerta</td>
+      <td>40</td>
+      <td>0,2%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>apolices_id_duplicado</td>
+      <td>unicidade</td>
+      <td>alerta</td>
+      <td>87</td>
+      <td>0,3%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>apolices_premio_nao_positivo</td>
+      <td>validade</td>
+      <td>bloqueante</td>
+      <td>57</td>
+      <td>0,2%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>apolices_cancelamento_antes_inicio</td>
+      <td>consistência</td>
+      <td>bloqueante</td>
+      <td>35</td>
+      <td>0,1%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>apolices_status_inconsistente</td>
+      <td>consistência</td>
+      <td>bloqueante</td>
+      <td>0</td>
+      <td>0,0%</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>apolices_cliente_orfao</td>
+      <td>integridade</td>
+      <td>bloqueante</td>
+      <td>28</td>
+      <td>0,1%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>sinistros_apolice_orfa</td>
+      <td>integridade</td>
+      <td>bloqueante</td>
+      <td>4</td>
+      <td>0,1%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>sinistros_antes_vigencia</td>
+      <td>consistência</td>
+      <td>bloqueante</td>
+      <td>12</td>
+      <td>0,3%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>sinistros_pago_maior_que_avisado</td>
+      <td>consistência</td>
+      <td>bloqueante</td>
+      <td>10</td>
+      <td>0,2%</td>
+      <td>FALHA</td>
+    </tr>
+    <tr>
+      <td>sinistros_pago_sem_aprovacao</td>
+      <td>consistência</td>
+      <td>bloqueante</td>
+      <td>0</td>
+      <td>0,0%</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>jornada_evento_futuro</td>
+      <td>validade</td>
+      <td>bloqueante</td>
+      <td>0</td>
+      <td>0,0%</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <td>jornada_produto_invalido</td>
+      <td>integridade</td>
+      <td>bloqueante</td>
+      <td>0</td>
+      <td>0,0%</td>
+      <td>OK</td>
+    </tr>
+  </tbody>
+</table></div>
+<footer>Fonte: data mart <code>data/warehouse.db</code> · consultas em <code>src/insurance_analytics/sql/kpis/</code></footer>
+</main></body></html>

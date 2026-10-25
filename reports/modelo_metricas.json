@@ -1,0 +1,22 @@
+{
+  "modelo_principal": "Regressão logística",
+  "linhas_treino": 10654,
+  "linhas_teste": 4684,
+  "taxa_base_treino": 0.2239,
+  "taxa_base_teste": 0.2248,
+  "auc_teste": 0.664,
+  "lift_top_decil": 1.9,
+  "captura_top_decil": 0.1899,
+  "comparacao_modelos": {
+    "Regressão logística": {
+      "auc": 0.664,
+      "average_precision": 0.3556,
+      "brier": 0.1641
+    },
+    "Gradient boosting": {
+      "auc": 0.6631,
+      "average_precision": 0.3544,
+      "brier": 0.1643
+    }
+  }
+}
