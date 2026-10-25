@@ -54,7 +54,7 @@ def build_dim_date(start: str = "2018-01-01") -> pd.DataFrame:
     return pd.DataFrame({
         "date_key": date_key(d), "full_date": d.dt.strftime("%Y-%m-%d"), "year": d.dt.year,
         "quarter": d.dt.quarter, "month": d.dt.month, "year_month": d.dt.strftime("%Y-%m"),
-        "day_of_week": d.dt.dayofweek, "is_weekend": (d.dt.dayofweek >= 5).astype(int),
+        "day_of_week": d.dt.day_of_week, "is_weekend": (d.dt.day_of_week >= 5).astype(int),
     })
 
 
@@ -64,7 +64,7 @@ def build_dim_customer(cust: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame({
         "customer_key": cust["customer_id"], "gender": cust["gender"], "state": cust["state"],
         "region": cust["state"].map(STATE_TO_REGION).fillna("ND"), "income_band": cust["income_band"],
-        "segment": cust["segment"], "age": age, "age_band": age_band.astype(str).replace("nan", "ND"),
+        "segment": cust["segment"], "age": age, "age_band": age_band.astype("string").fillna("ND"),
         "account_open_date_key": date_key(cust["account_open_date"]),
     })
 
