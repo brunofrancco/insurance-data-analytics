@@ -56,10 +56,10 @@ flowchart LR
 **Achados e recomendações**
 
 - **Sinistralidade:** Pet (72%) e Auto (69%) estão acima da referência de 60%; Viagem (24%) e Residencial (29%) são os mais rentáveis. → revisar precificação/aceitação de Pet e Auto.
-- **Cancelamento:** quem paga com **Pix cancela 30%** em 12 meses, contra **19% no débito em conta** — diferença estatisticamente significativa (qui-quadrado, p < 0,001). → incentivar débito automático na contratação e validar com teste A/B.
+- **Cancelamento:** quem paga com **Pix cancela 30%** em 12 meses, contra **19% no débito em conta** - diferença estatisticamente significativa (qui-quadrado, p < 0,001). → incentivar débito automático na contratação e validar com teste A/B.
 - **Funil digital:** o maior gargalo é *oferta → simulação* (55% de passagem). → testar simulação com menos campos / pré-preenchida com dados da conta.
 - **Cross-sell:** 71% dos clientes ativos têm um único produto, e cada produto adicional **reduz** o risco de cancelamento (odds ratio 0,83).
-- **Modelo:** os 10% de apólices com maior score cancelam **43%** (vs. 22% da média) — lift de 1,9x para priorizar ações de retenção.
+- **Modelo:** os 10% de apólices com maior score cancelam **43%** (vs. 22% da média) - lift de 1,9x para priorizar ações de retenção.
 
 <p align="center">
   <img src="reports/figures/premio_mensal.png" width="49%">
@@ -74,10 +74,10 @@ flowchart LR
 
 Star schema com 4 dimensões conformadas e 4 tabelas fato em granularidades diferentes:
 
-- `fact_policy` — uma linha por apólice (ciclo de vida acumulado)
-- `fact_policy_month` — **snapshot periódico** apólice × mês, com prêmio ganho *pro rata die* — base para séries temporais, coortes e sinistralidade
-- `fact_claim` — uma linha por aviso de sinistro
-- `fact_funnel_event` — uma linha por evento da jornada digital
+- `fact_policy` - uma linha por apólice (ciclo de vida acumulado)
+- `fact_policy_month` - **snapshot periódico** apólice × mês, com prêmio ganho *pro rata die* - base para séries temporais, coortes e sinistralidade
+- `fact_claim` - uma linha por aviso de sinistro
+- `fact_funnel_event` - uma linha por evento da jornada digital
 
 Detalhes, diagrama ER e decisões de modelagem em [`docs/modelo_de_dados.md`](docs/modelo_de_dados.md).
 
@@ -89,7 +89,7 @@ Detalhes, diagrama ER e decisões de modelagem em [`docs/modelo_de_dados.md`](do
 | Gradient boosting | 0,663 | 0,354 | 0,164 |
 
 - **Sem vazamento:** a ABT ([`abt_cancelamento.sql`](src/insurance_analytics/sql/abt_cancelamento.sql)) usa apenas informações disponíveis no momento da contratação.
-- **Validação fora do tempo:** treino com contratações até jun/2024, teste com jul–dez/2024 — simula o uso real.
+- **Validação fora do tempo:** treino com contratações até jun/2024, teste com jul–dez/2024 - simula o uso real.
 - **Por que logística:** desempenho equivalente ao gradient boosting e coeficientes interpretáveis para o negócio ([odds ratios](reports/modelo_odds_ratios.csv)).
 - O AUC moderado é esperado: cancelamento tem muito componente aleatório. O valor está na **ordenação** (lift), não na previsão individual.
 
